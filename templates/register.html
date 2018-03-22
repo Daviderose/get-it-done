@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}    
+<h1>Register to Get It Done!</h1>
+<form action="/register" method="POST">
+    <table>
+        <tr>
+            <td>
+                <label>Email 
+                    <input type="email" name="email" placeholder="johndoe@email.com" value="{{email}}" />
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Password
+                    <input type="password" name="password" placeholder="3-20 characters" />
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Verify Password
+                    <input type="password" name="verify" placeholder="3-20 characters, must match password" />
+                </label>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="SignUp" />
+</form>
+
+{% endblock %}
